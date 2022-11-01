@@ -1,0 +1,46 @@
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:l="sap.ui.layout" 
+    xmlns:f="sap.ui.layout.form"
+    controllerName="sap.m.sample.Menu.controller.Page">
+    <Dialog title="Slices Color" resizable="false" draggable="true">
+        <Table id="table" width="500px"  updateFinished="onUpdateFinished"
+                    items= "{oModel>/selColList}"
+					alternateRowColors="true"
+					class="sapUiResponsiveMargin sapUiNoMarginTop">
+				<columns>
+					<Column hAlign="Center">
+						<header>
+                            <Text text="Categorical Data"></Text>
+						</header>
+					</Column>
+					<Column hAlign="Center">
+						<header>
+                            <Text text="Colour"></Text>
+						</header>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier text="{oModel>Name}"/>
+                                <!-- Input for the color picker. -->
+							<Input enabled="true" 
+                                type="Text" 
+                                placeholder="Enter Color ..." 
+                                class = "MyClass"
+                                change="handleInputChange" 
+                                valueHelpRequest="openDefaultModeSample"
+                                showValueHelp="true"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+		</Table>
+        <FlexBox alignItems="Start" justifyContent="End">
+            <Button class="sapUiLargeMarginBegin" text="Save" type="Emphasized" press="sliceColorSavePress"/>
+            <Button class="sapUiSmallMarginBeginEnd" text="Cancel" press="sliceColorCancelPress"/> 
+        </FlexBox>
+    </Dialog>
+</core:FragmentDefinition>

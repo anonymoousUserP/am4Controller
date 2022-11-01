@@ -1,0 +1,7 @@
+specVersion: '2.6'
+metadata:
+  name: Am4Controller
+type: application
+framework:
+  name: OpenUI5
+  version: "1.104.0"

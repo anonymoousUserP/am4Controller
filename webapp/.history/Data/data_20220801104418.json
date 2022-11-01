@@ -1,0 +1,28 @@
+{
+    "ChartType":[
+        {
+            "Chart" : "Pie Chart"
+        },
+        {
+            "chart" : "XY Chart"
+        },
+        {
+            "Chart" : "Radar Chart"
+        },
+        {
+            "Chart" : "Treemap Chart"
+        },
+        {
+            "Chart" : "Sankey Diagram"
+        },
+        {
+            "Chart" : "gauge Chart"
+        },
+        {
+            "Chart" : ""
+        },
+        {
+            "Chart" : ""
+        }
+    ]
+}

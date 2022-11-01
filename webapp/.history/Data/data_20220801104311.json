@@ -1,0 +1,13 @@
+{
+    "ChartType":[
+        {
+            "Chart" : "Pie Chart"
+        },
+        {
+            "chart" : "XY Chart"
+        },
+        {
+            "Chart" : ""
+        }
+    ]
+}

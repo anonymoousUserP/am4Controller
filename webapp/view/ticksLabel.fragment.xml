@@ -1,0 +1,36 @@
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:l="sap.ui.layout" 
+    xmlns:f="sap.ui.layout.form" 
+    controllerName="sap.m.sample.Menu.controller.Page">
+    <Dialog title="Ticks abd Label" resizable="false" draggable="true">
+        <f:SimpleForm 
+            id="SimpleFormTickLabel" 
+            editable="false" 
+            layout="ResponsiveGridLayout" 
+            labelSpanS="4" 
+            adjustLabelSpan="false" 
+            singleContainerFullSize="false">
+            <f:content>
+                <Label class="sapUiSmallMarginTop lab1" text="ticks"></Label>
+                <ComboBox id="ticks" items="{oModel>/boolType}" change="ticksPress">
+                    <core:Item key="{oModel>val}" text="{oModel>val}" />
+                </ComboBox>
+                <Label class="sapUiSmallMarginTop lab1" text="labels" />
+                <ComboBox id="labels" items="{oModel>/boolType}" change="labelsPress">
+                    <core:Item key="{oModel>val}" text="{oModel>val}" />
+                </ComboBox>
+                <Label class="sapUiSmallMarginTop lab1" text="ToolTips"></Label>
+                <ComboBox id="toolTips" items="{oModel>/boolType}" change="toolTipsPress"> 
+                    <core:Item key="{oModel>val}" text="{oModel>val}" />
+                </ComboBox>
+            </f:content>
+        </f:SimpleForm>
+        <FlexBox alignItems="Start" justifyContent="End">
+            <Button class="sapUiLargeMarginBegin" text="Save" type="Emphasized" press="tipsSavePress" />
+            <Button class="sapUiSmallMarginBeginEnd" text="Cancel" press="tipsCancelPress" />
+        </FlexBox>
+    </Dialog>
+</core:FragmentDefinition>

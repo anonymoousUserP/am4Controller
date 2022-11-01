@@ -1,0 +1,59 @@
+{
+	"_version": "1.21.0",
+	"sap.app": {
+		"id": "sap.m.sample.Menu",
+		"type": "application",
+		"title": "Am4Controller",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sap.m.sample.Menu.view.Page",
+			"type": "XML",
+			"async": true
+		},
+		"dependencies": {
+			"minUI5Version": "1.98.0",
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {}
+			}
+		},
+		"contentDensities" : {
+			"compact" : true,
+			"cozy": true
+		},
+		"models": {
+			"oModel" : {
+				"type" : "sap.ui.model.json.JSONModel",
+				"uri" : "Data/data.json"	
+			}
+		},
+		"config": {
+			"sample": {
+				"files": [
+					"view.Page.view.xml",
+					"controller.Page.controller.js",
+					"manifest.json"
+				]
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		}
+	}
+}

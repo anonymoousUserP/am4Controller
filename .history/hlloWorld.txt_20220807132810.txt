@@ -1,0 +1,118 @@
+oModel -> data.json  ->  It contain additional information required for creating the map.
+chartDataModel -> chartData.json -> It is for the chart data for which the map will be created.
+configureModel -> It contans the information about the configuration of the charts.
+
+21000 < sal
+
+ESI -> 1300, 250
+PF ->  1800
+Gra ->  721
+
+Save Button, Cancel Button, Download Button,
+Total working of slice color and Edit data features
+
+<mvc:View controllerName="sap.m.sample.Menu.controller.Page" height="90%" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns="sap.m">
+	<HBox class="Main sapUiLargeMargin">
+		<VBox class="Frame" width="75%">
+			<Text id="frameText" text="Charts will appear here"></Text>
+			<core:HTML content='&lt;div class=&quot;abc&quot; height=&quot;800px;&quot; id=&quot;chartdiv&quot;&gt;'></core:HTML>
+		</VBox>
+		<VBox class="sapUiMediumMargin SideSection">
+			<HBox class="">
+				<l:VerticalLayout>
+					<HBox>
+						<Label class="sapUiSmallMargin lab1" text="Upload: "></Label>
+						<u:FileUploader width="200px" id="fileUploader" uploadOnChange="true" multiple="false" name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server" uploadComplete="onChange" />
+						<!-- <Image id="Prem" src="../Rescource/Design.png"/> -->
+					</HBox>
+					<HBox height="">
+						<Label class="sapUiSmallMargin lab1" text="Charts: " />
+						<ComboBox id="chart" items="{oModel>/ChartType}" change="chartPress">
+							<core:Item key="{oModel>Chart}" text="{oModel>Chart}" />
+						</ComboBox>
+					</HBox>
+					
+					<HBox>
+						<Label class="sapUiSmallMargin lab1" text="values: " />
+						<ComboBox id="value" items="{oModel>/valueCols}" change="valuePress">
+							<core:Item key="{oModel>name}" text="{oModel>name}" />
+						</ComboBox>
+					</HBox>
+
+					<HBox>
+						<!-- numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }" -->
+						<Label class="sapUiSmallMargin lab1" text="Category:" />
+						<ComboBox id="category" items="{oModel>/categoryCols}" change="categoryPress">
+							<core:Item key="{oModel>name}" text="{oModel>name}" />
+						</ComboBox>
+					</HBox>
+
+					
+					<HBox>
+						<!-- numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }" -->
+						<Label class="sapUiSmallMargin lab1" text="Theme:" />
+						<ComboBox id="theme" items="{oModel>/Theme}" change="themePress">
+							<core:Item key="{oModel>Themename}" text="{oModel>Themename}" />
+						</ComboBox>
+					</HBox>
+
+					<HBox>
+						<!-- numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }" -->
+						<Label class="sapUiSmallMargin lab1" text="Dimension:" />
+						<ComboBox id="dimension" items="{oModel>/Dimension}" change="dimensionPress">
+							<core:Item key="{oModel>Type}" text="{oModel>Type}" />
+						</ComboBox>
+					</HBox>
+					
+					<HBox>
+						<Label class="sapUiSmallMarginTop lab1" text="strokeColour:" />
+						<Input type="Text" id="strokeColour" change="strokeColourPress"></Input>						
+					</HBox>
+					<HBox>
+						<Label class="sapUiSmallMargin lab1" text="strokeWidth :" />
+						<Input type="Number" id="strokeWidth" change="strokeWidthPress"></Input>						
+					</HBox>
+					<HBox>
+						<Label class="sapUiSmallMargin lab1" text="strokeOpacity :" />
+						<Input type="Number" id="strokeOpacity" change="strokeOpacityPress"></Input>						
+					</HBox>
+					<HBox>
+						<Label class="sapUiSmallMargin lab1" text="InnerRadius:"  />
+						<Input type="Number" id="percent" change="innerRadiusPress"></Input>						
+					</HBox>
+
+					<HBox>
+						<Label class="sapUiSmallMargin lab1" text="ticks: "></Label>
+						<ComboBox id="ticks" items="{oModel>/boolType}" change="ticksPress">
+							<core:Item key="{oModel>val}" text="{oModel>val}" />
+						</ComboBox>
+					</HBox>
+
+					<HBox>
+						<!-- numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }" -->
+						<Label class="sapUiSmallMargin lab1" text="labels:" />
+						<ComboBox id="labels" items="{oModel>/boolType}" change="labelsPress">
+							<core:Item key="{oModel>val}" text="{oModel>val}" />
+						</ComboBox>
+					</HBox>
+
+					<HBox>
+						<Label class="sapUiSmallMargin lab1" text="ToolTips: "></Label>
+						<ComboBox id="toolTips" items="{oModel>/boolType}" change="toolTipsPress">
+							<core:Item key="{oModel>val}" text="{oModel>val}" />
+						</ComboBox>
+					</HBox>
+					
+					<HBox class="sapUiMediumMargin">
+						<Button class="sapUiTinyMarginEnd" text="Generate" press="Generate" width="100px" />
+						<Button id="button" text="Save" press="onSave" width="90px" type="Emphasized" />
+						<Button id="Save" press="cancelPress" class="sapUiTinyMarginBegin Save" text="Cancel" type="Reject" />
+						<Button id="download" press="downloadPress" class="sapUiTinyMarginBegin Save" text="Download" icon="sap-icon://download"/>
+					</HBox>
+					
+				</l:VerticalLayout>
+			</HBox>
+			<HBox></HBox>
+		</VBox>
+	</HBox>
+</mvc:View>

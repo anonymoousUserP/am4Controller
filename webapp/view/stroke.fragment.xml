@@ -1,0 +1,24 @@
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:l="sap.ui.layout" 
+    xmlns:f="sap.ui.layout.form"
+    controllerName="sap.m.sample.Menu.controller.Page">
+    <Dialog title="Stroke" resizable="false" draggable="true" >
+        <f:SimpleForm id="SimpleFormStroke" editable="false" layout="ResponsiveGridLayout" labelSpanS="4" adjustLabelSpan="false" emptySpanS="0" singleContainerFullSize="false">
+            <f:content>
+                <Label class="sapUiSmallMarginTop lab1" text="Color" />
+                <Input type="Text" id="strokeColour" change="strokeColourPress" ></Input>
+                <Label class="sapUiSmallMarginTop lab1" text="Width" />
+                <Input type="Number" id="strokeWidth" change="strokeWidthPress"></Input>
+                <Label class="sapUiSmallMarginTop lab1" text="Opacity" />
+                <Input type="Number" id="strokeOpacity" change="strokeOpacityPress"></Input>
+            </f:content>
+        </f:SimpleForm>
+        <FlexBox alignItems="Start" justifyContent="End">
+            <Button class="sapUiLargeMarginBegin" text="Save" type="Emphasized" press="strokeSavePress"/>
+            <Button class="sapUiSmallMarginBeginEnd" text="Cancel" press="strokeCancelPress"/> 
+        </FlexBox>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,22 @@
+.Frame {
+  border-right: 3px solid #d3d1cd;
+  }
+  .lab1{
+    font-weight: 500;
+    font-size: 16px;
+    font-family: monospace;
+  }
+  .abc{
+      height: 60vh;;
+  }
+  .fragmentLabel{
+    font-family: "72","72full",Arial,Helvetica,sans-serif;
+    font-weight: normal;
+    line-height: 2.75rem;
+    color: #32363a;
+    font-size: 1.125rem;
+  }
+
+  .sapUiFormResGridMain {
+    padding: 7.8px !important;
+  }

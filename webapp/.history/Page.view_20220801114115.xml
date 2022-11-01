@@ -1,0 +1,31 @@
+<mvc:View controllerName="sap.m.sample.Menu.Page"
+		height="100%"
+		xmlns:l="sap.ui.layout"
+		xmlns:core="sap.ui.core"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns="sap.m">	
+	<HBox class="Main sapUiLargeMargin">
+		<VBox class="Frame" height="73vh" width="70%">
+			<Text text="Charts will appear here"></Text>
+		</VBox>
+		<VBox class="sapUiMediumMargin SideSection">
+			<HBox class="">
+				<l:VerticalLayout>
+				<HBox height="65vh" >
+					<Label class="sapUiSmallMargin lab1" text="Chart: "/>
+					<ComboBox id="map"
+					items="{oModel>/ChartType}">
+						<core:Item key="{oModel>Chart}" text="{oModel>Chart}" />
+					</ComboBox>
+				</HBox>
+				<HBox class>
+					<Button text="Generate"/>
+					<Button id="button" text="Open Menu" press="onPress" ariaHasPopup="Menu"/>
+				</HBox>
+				</l:VerticalLayout>
+			</HBox>
+			<HBox>
+			</HBox>
+		</VBox>
+	</HBox>
+</mvc:View>

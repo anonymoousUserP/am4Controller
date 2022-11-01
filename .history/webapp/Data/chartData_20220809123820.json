@@ -1,0 +1,65 @@
+[{
+        "country": "Lithuania",
+        "litres": 501.9,
+        "captial": "Vilnius",
+        "population": 2790000,
+        "President" : "Ingrida Šimonytė",
+        "primMinister" : "Gitanas Nausėda"
+    }, {
+        "country": "Czech Republic",
+        "litres": 301.9,
+        "captial": "Prague",
+        "population": 10700000,
+        "President" : "Miloš Zeman",
+        "primMinister" : "Petr Fiala"
+    }, {
+        "country": "Ireland",
+        "litres": 201.1,
+        "captial": "Dublin",
+        "population": 5052259,
+        "President" : "Michael D. Higgins",
+        "primMinister" : "Micheál Martin"
+    }, {
+        "country": "Germany",
+        "litres": 165.8,
+        "captial": "Berlin",
+        "population": 83200000,
+        "President" : "Frank-Walter Steinmeier",
+        "primMinister" : "Angela Merkel"
+    }, {
+        "country": "Australia",
+        "litres": 139.9,
+        "captial": "Canberra",
+        "population": 25700000,
+        "President" : "Incumbent Anthony Albanese",
+        "primMinister" : "Anthony Albanese"
+    }, {
+        "country": "Austria",
+        "litres": 128.3,
+        "captial": "Vienna",
+        "population": 8920000,
+        "President" : "Alexander Van der Bellen",
+        "primMinister" : "Sebastian Kurz"
+    }, {
+        "country": "UK",
+        "litres": 99,
+        "captial": "London",
+        "population": 67200000,
+        "President" : "Prem Mishra",
+        "primMinister" : "Boris Johnson"
+    }, {
+        "country": "Belgium",
+        "litres": 60,
+        "captial": "Brussels",
+        "population": 11600000,
+        "President" : "Afham fardeen",
+        "primMinister" : "Incumbent Alexander"
+    }, {
+        "country": "The Netherlands",
+        "litres": 50,
+        "captial": "Amsterdam",
+        "population": 17400000,
+        "President" : "Dries van Agt",
+        "primMinister" : "Mark Rutte"
+    }
+]

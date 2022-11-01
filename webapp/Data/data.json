@@ -1,0 +1,77 @@
+{
+    "ChartType":[
+        {
+            "Chart" : "Pie Chart",
+            "chartType" : "serial chart"
+        },
+        {
+            "Chart" : "XY Chart"
+        },
+        {
+            "Chart" : "Radar Chart"
+        },
+        {
+            "Chart" : "Treemap Chart"
+        },
+        {
+            "Chart" : "Sankey Diagram"
+        },
+        {
+            "Chart" : "gauge Chart"
+        },
+        {
+            "Chart" : "Chord Diagram"
+        },
+        {
+            "Chart" : "WordCloud"
+        }
+    ],
+    "Theme" : [{
+        "Themename" : "animated"
+    },
+    {
+        "Themename" : "amchartsdark"
+    },
+    {
+        "Themename" : "dark"
+    },
+    {
+        "Themename" : "dataviz"
+    },
+    {
+        "Themename" : "frozen"
+    },
+    {
+        "Themename" : "kelly"
+    },
+    {
+        "Themename" : "material"
+    },
+    {
+        "Themename" : "microchart"
+    },
+    {
+        "Themename" : "moonrisekingdom"
+    },
+    {
+        "Themename" : "patterns"
+    },
+    {
+        "Themename" : "spiritedaway"
+    }],
+    "boolType" : [{
+        "val" : true
+    },
+    {
+       "val" : false 
+    }],
+    "Dimension" : [{
+        "Type": "2D"
+    },
+    {
+        "Type": "3D"
+    }],
+    "chartInfo" : [],
+    "valueCols" : [],
+    "categoryCols" : []
+}

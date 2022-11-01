@@ -1,0 +1,143 @@
+<mvc:View 
+	controllerName="sap.m.sample.Menu.controller.Page" 
+	height="90%" xmlns:l="sap.ui.layout" 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:u="sap.ui.unified"
+	xmlns:f="sap.ui.layout.form" 
+	xmlns="sap.m">
+	<HBox class="Main sapUiMediumMargin">
+		<VBox class="Frame" width="75%" height="95vh">
+			<Text id="frameText" text="Charts will appear here"></Text>
+			<core:HTML content='&lt;div class=&quot;abc&quot; height=&quot;900px;&quot; id=&quot;chartdiv&quot;&gt;'></core:HTML>
+		</VBox>
+		<VBox class="sapUiMediumMarginBegin SideSection">
+			<HBox class="">
+				<l:VerticalLayout>
+					<f:SimpleForm id="SimpleFormDisplay354wide"
+						editable="false"
+						layout="ResponsiveGridLayout"
+						title="Chart Detail"
+						labelSpanS="4"
+						adjustLabelSpan="true"
+						emptySpanS="2"
+						singleContainerFullSize="false">
+						<f:content>
+							<Label class="sapUiSmallMarginTop lab1" text="Upload"></Label>
+							<u:FileUploader 
+								width="200px" 
+								id="fileUploader" 
+								uploadOnChange="true" multiple="false" name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server" uploadComplete="onChange" />
+							<Label class="sapUiSmallMarginTop lab1" text="Charts" />
+							<ComboBox id="chart" items="{oModel>/ChartType}" change="chartPress">
+								<core:Item key="{oModel>Chart}" text="{oModel>Chart}" />
+							</ComboBox>
+							<Label class="sapUiSmallMarginTop lab1" text="values" />
+							<ComboBox id="value" items="{oModel>/valueCols}" change="valuePress">
+								<core:Item key="{oModel>name}" text="{oModel>name}" />
+							</ComboBox>
+							<Label class="sapUiSmallMarginTop lab1" text="Category" />
+							<ComboBox id="category" class=""  items="{oModel>/categoryCols}" change="categoryPress">
+								<core:Item key="{oModel>name}" text="{oModel>name}" />
+							</ComboBox>
+						</f:content>
+					</f:SimpleForm>
+					
+					<f:SimpleForm id="SimpleFormDedign"
+						editable="false"
+						class="sapUiNoMargin"
+						layout="ResponsiveGridLayout"
+						title="Design and theme"
+						labelSpanS="4"
+						adjustLabelSpan="true"
+						emptySpanS="2"
+						singleContainerFullSize="false">
+						<f:content>
+							<Label class="sapUiSmallMarginTop lab1" text="Theme" />
+							<ComboBox id="theme" items="{oModel>/Theme}" change="themePress">
+								<core:Item key="{oModel>Themename}" text="{oModel>Themename}" />
+							</ComboBox>
+							<Label class="sapUiSmallMarginTop lab1" text="Dimension" />
+							<ComboBox id="dimension" items="{oModel>/Dimension}" change="dimensionPress">
+								<core:Item key="{oModel>Type}" text="{oModel>Type}" />
+							</ComboBox>
+							<Label class="sapUiSmallMarginTop lab1" text="InnerRadius"  />
+							<Input type="Number" id="percent" change="innerRadiusPress"></Input>
+						</f:content>
+					</f:SimpleForm>
+
+					
+
+					<!-- <f:SimpleForm id="SimpleFormStroke"
+						editable="false"
+						layout="ResponsiveGridLayout"
+						title="Stroke"
+						labelSpanS="4"
+						adjustLabelSpan="false"
+						emptySpanS="2"
+						singleContainerFullSize="false">
+						<f:content>
+							<Label class="sapUiSmallMarginTop lab1" text="Color" />
+							<Input type="Text" id="strokeColour" change="strokeColourPress"></Input>		
+							<Label class="sapUiSmallMarginTop lab1" text="Width" />
+							<Input type="Number" id="strokeWidth" change="strokeWidthPress"></Input>	
+							<Label class="sapUiSmallMarginTop lab1" text="Opacity" />
+							<Input type="Number" id="strokeOpacity" change="strokeOpacityPress"></Input>	
+						</f:content>
+					</f:SimpleForm> -->
+
+					<f:SimpleForm id="SimpleFormAdditionalInfo"
+						editable="false"
+						class="sapUiNoMargin"
+						layout="ResponsiveGridLayout"
+						title="Advance tools"
+						labelSpanS="4"
+						adjustLabelSpan="true"
+						emptySpanS="2"
+						singleContainerFullSize="false">
+						<f:content>
+							<Label class=" sapUiSmallMarginTop lab1" text="Stroke"/>
+							<Button class="" width="" type="Default" text="Edit Stroke" press="strokePress" icon="sap-icon://edit"></Button>
+							<Label class="sapUiSmallMarginTop lab1" text="Tick and Label"/>
+							<Button class="" width="" text="Edit Ticks and Label" press="tipsTricksPress" icon="sap-icon://edit"></Button>
+							<Label class="sapUiSmallMarginTop lab1" text="Slice Color"/>
+							<Button class="" width="" text="Edit Slice Color" press="sliceColorPress" icon="sap-icon://edit"></Button>
+						</f:content>
+					</f:SimpleForm>
+
+					<f:SimpleForm id="SimpleFormAdditionalFeatues"
+						editable="false"
+						layout="ResponsiveGridLayout"
+						title="Additional Featues"
+						labelSpanS="4"
+						adjustLabelSpan="false"
+						emptySpanS="2"
+						singleContainerFullSize="false">
+						<f:content>
+							<Label class="sapUiSmallMarginTop lab1" text="ticks"></Label>
+							<ComboBox id="ticks" items="{oModel>/boolType}" change="ticksPress">
+								<core:Item key="{oModel>val}" text="{oModel>val}" />
+							</ComboBox>
+							<Label class="sapUiSmallMarginTop lab1" text="labels" />
+							<ComboBox id="labels" items="{oModel>/boolType}" change="labelsPress">
+								<core:Item key="{oModel>val}" text="{oModel>val}" />
+							</ComboBox>
+							<Label class="sapUiSmallMarginTop lab1" text="ToolTips"></Label>
+							<ComboBox id="toolTips" items="{oModel>/boolType}" change="toolTipsPress">
+								<core:Item key="{oModel>val}" text="{oModel>val}" />
+							</ComboBox>
+						</f:content>
+					</f:SimpleForm>
+					
+					<HBox class="sapUiMediumMargin sapUiNoMarginTop">
+						<Button class="sapUiTinyMarginEnd" text="Generate" press="Generate" width="100px" />
+						<Button id="button" text="Save" press="onSave" width="90px" type="Emphasized" />
+						<Button id="Save" press="cancelPress" class="sapUiTinyMarginBegin Save" text="Cancel" type="Reject" />
+						<Button id="download" type="Accept" press="downloadPress" class="sapUiTinyMarginBegin Save" text="Download" icon="sap-icon://download"/>
+					</HBox>
+				</l:VerticalLayout>
+			</HBox>
+			<HBox></HBox>
+		</VBox>
+	</HBox>
+</mvc:View>

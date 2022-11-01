@@ -1,0 +1,24 @@
+oModel -> data.json  ->  It contain additional information required for creating the map.
+chartDataModel -> chartData.json -> It is for the chart data for which the map will be created.
+configureModel -> It contans the information about the configuration of the charts.
+
+21000 < sal
+
+ESI -> 1300, 250
+PF ->  1800
+Gra ->  721
+
+* It don't need backend server. It is compiled at the client-side that is in the web browser.
+* Chart can be generated very easily and in real time so that any body can just do trail and run to get the best possible out
+* Its implementation is very easy. 
+Color Picker architecture : 
+Initially all the value in the color picker will be empty as the user
+
+Next I will be learning Node js with the help of that youtube , fixing that node server issue after that we .
+
+Save Button, Cancel Button, Download Button,
+Total working of slice color and Edit data features.
+
+Bugs -> 
+1. Have some bugs related to edit data.
+2. Today I really don't feel like coding. I am feeling a little bit 

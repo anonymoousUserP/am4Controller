@@ -1,0 +1,45 @@
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:l="sap.ui.layout" 
+    xmlns:f="sap.ui.layout.form"
+    controllerName="sap.m.sample.Menu.controller.Page">
+    <Dialog title="Edit Data" resizable="false" draggable="true">
+        <Table id="table01" width="500px"  updateFinished="onUpdateFinished"
+                    items= "{oModel>/}"
+					alternateRowColors="true"
+					class="sapUiResponsiveMargin sapUiNoMarginTop">
+				<columns>
+					<Column hAlign="Center">
+						<header>
+                            <Text text="Categorical Data"></Text>
+						</header>
+					</Column>
+					<Column hAlign="Center">
+						<header>
+                            <Text text="Value Data"></Text>
+						</header>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Input enabled="true"
+                                type="Text"
+                                placeholder="Enter the Value..."
+                                value="{oModel>Name}"/>
+							<Input enabled="true"
+                                type="Text"
+                                placeholder="Enter the Value..."
+                                value="{oModel>}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+		</Table>
+        <FlexBox alignItems="Start" justifyContent="End">
+            <Button class="sapUiLargeMarginBegin" text="Save" type="Emphasized" press="editDataSavePress"/>
+            <Button class="sapUiSmallMarginBeginEnd" text="Cancel" press="editDataCancelPress"/> 
+        </FlexBox>
+    </Dialog>
+</core:FragmentDefinition>
